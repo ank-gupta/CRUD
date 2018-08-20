@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script language="JavaScript" type="text/javascript">
+$(document).ready(function(){
+    $("a.delete").click(function(e){
+        if(!confirm('Are you sure?')){
+            e.preventDefault();
+            return false;
+        }
+        return true;
+    });
+});
+</script>
+<body style="background-color:yellow">
+<form align="center">
+<br>
+<br>
+ <label>Name:</label>
+      <input type="text" class="form-control" >
+      <br>
+	   <br> <label>Status:</label>
+	  <input type="text" class="form-control">
+	 	  <input type="hidden" name="option" value="update">
+<br>
+<br>
+<button>update</button>
+
+
+
+</form>
+</body>
